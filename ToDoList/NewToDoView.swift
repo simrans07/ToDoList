@@ -6,8 +6,10 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct NewToDoView: View {
+    @Bindable var toDoItem: ToDoItem
     var body: some View {
         VStack {
             Text("Task Title")
@@ -26,5 +28,5 @@ struct NewToDoView: View {
 }//struct
 
 #Preview {
-    NewToDoView()
+    NewToDoView(toDoItem: ToDoItem(title: "", isImportant: false))
 }
